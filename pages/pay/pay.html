@@ -1,0 +1,118 @@
+<html>
+<head>
+  <title>programm</title>
+  <link type="text/css" rel="stylesheet" href="../../style.css">
+  <link type="text/css" rel="stylesheet" href="style.css">
+
+  <meta charset="utf-8">
+  <meta name="description" content=" سایت بدنسازی   REMOX">
+  <meta name="keywords" content="بدنسازی,فیتنس,باشگاه,برنامه,دمبل,هالتر">
+  <meta name="author" content="REMOX">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="author"content="REMOX">
+    <meta name="robots" content="index,follow">
+    <meta property="og:title" content="سایت بدنسازی REMOX">
+    <meta property="og:description" content="با ورزش از بدنتون تشکر کنید">
+    <meta property="og:image" content="image/logo.jpg">
+    <meta property="og:url" content="https://site.com/home">
+    <meta property="og:type" content="website">
+
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ========== HEADER ========== -->
+<header class="header">
+    <div class="logo">Remox-Code</div>
+
+    <nav class="nav">
+        <ul>
+            <li><a href="../login/login.html">ورود / عضویت</a></li>
+            <li><a href="../get in touch/get in touch.html">تماس با ما</a></li>
+            <li><a href="../moves/moves.html">حرکات</a></li>
+            <li><a href="../about/about.html">درباره ما</a></li>
+            <li><a href="../../index.html">خانه</a></li>
+
+        </ul>
+    </nav>
+</header>
+
+<div class="wrapper">
+
+    <!-- باکس پرداخت شهریه -->
+    <div class="card">
+        <h2>پرداخت شهریه</h2>
+
+        <select id="month">
+            <option value="">انتخاب ماه</option>
+            <option>فروردین</option>
+            <option>اردیبهشت</option>
+            <option>خرداد</option>
+            <option>تیر</option>
+            <option>مرداد</option>
+            <option>شهریور</option>
+            <option>مهر</option>
+            <option>آبان</option>
+            <option>آذر</option>
+            <option>دی</option>
+            <option>بهمن</option>
+            <option>اسفند</option>
+        </select>
+
+        <select id="year">
+            <option value="">انتخاب سال</option>
+            <option>1403</option>
+            <option>1404</option>
+            <option>1405</option>
+        </select>
+
+        <button id="payTuition">پرداخت شهریه 💳</button>
+        <p class="msg" id="tuitionMsg"></p>
+    </div>
+
+    <!-- باکس برنامه -->
+    <div class="card">
+        <h2>دریافت برنامه تمرینی</h2>
+
+        <div class="row">
+            <input type="number" placeholder="قد (cm)">
+            <input type="number" placeholder="وزن (kg)">
+        </div>
+
+        <div class="row">
+            <input type="number" placeholder="سن">
+            <input type="number" placeholder="وزن هدف">
+        </div>
+
+        <select>
+            <option value="">انتخاب جنسیت</option>
+            <option>مرد</option>
+            <option>زن</option>
+        </select>
+
+        <select>
+            <option value="">مربی موردنظر</option>
+            <option>علی</option>
+            <option>پارسا</option>
+            <option>مانی</option>
+            <option>آیدا</option>
+        </select>
+
+<label for="imgInput" class="uploadLabel" id="uploadBtn">
+    انتخاب عکس
+</label>
+
+<input type="file" id="imgInput" accept="image/*">
+
+
+        <button id="payProgram">پرداخت و دریافت برنامه 📝</button>
+        <p class="msg" id="programMsg"></p>
+
+    </div>
+
+</div>
+
+<script src="js.js"></script>
+</body>
+</html>

@@ -1,0 +1,237 @@
+/* ======== GLOBAL ======== */
+body {
+    margin: 0;
+    font-family: "IRANSans", sans-serif;
+    background: #0b0b0d;
+    color: #eee;
+    font-family: 'Vazirmatn', sans-serif;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+section {
+    padding: 80px 0;
+}
+
+/* ======== HEADER ======== */
+.header {
+    width: 95%;
+    padding: 18px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    backdrop-filter: blur(12px);
+    background: rgba(20, 20, 20, 0);
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+
+    animation: fadeDown .8s ease forwards;
+}
+@keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.logo {
+        font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    background: linear-gradient(90deg,#ff006a,#ff3b3b);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+.nav ul li a {
+    position: relative;
+    padding-bottom: 4px;
+}
+.nav ul li a::after {
+    content:"";
+    position:absolute;
+    width:0;
+    height:2px;
+    bottom:0;
+    right:0;
+    background:#ff006a;
+    transition:.3s;
+}
+.nav ul li a:hover::after {
+    width:100%;
+}
+
+/* ======== HERO ======== */
+.hero {
+    height: 100vh;
+    position: relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.hero .bg {
+    position:absolute;
+    inset:0;
+    background: url('images/background.png') center/cover fixed no-repeat; /* مسیر درست */
+    filter: brightness(0.4);
+}
+
+.hero-content {
+    position:relative;
+    text-align:center;
+    width:80%;
+}
+
+.hero-content h1 , span {
+    font-size: 55px;
+    margin-bottom: 10px;
+    color: white;
+    font-family: 'Dana', sans-serif;
+font-weight: 700;
+}
+
+.hero-content h1  {
+    background: linear-gradient(90deg,#ff006a,#ff3b3b);
+    -webkit-background-clip: text;
+    color: transparent;
+        font-family: 'Bebas Neue', sans-serif;
+
+}
+
+.hero-content p {
+    font-size: 25px;
+    opacity: .85;
+}
+
+
+
+.hero-btn:hover {
+    background:#ff004f;
+    transform:translateY(-5px);
+}
+
+
+/* ======== SECTION TITLES ======== */
+.section-title {
+    font-size: 35px;
+    text-align:center;
+    margin:0 0 60px 0;
+    font-family: 'Dana', sans-serif;
+    font-weight: 700;
+}
+
+/* ======== FEATURES ======== */
+.feature-container {
+    display:grid;
+    gap:30px;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    width:90%;
+    margin:auto;
+    text-align: center;
+    line-height: 25px;
+}
+.feature-card {
+    background:#151515;
+    padding:25px;
+    border-radius:14px;
+    border:1px solid rgba(255,255,255,0.05);
+    box-shadow:0 0 25px rgba(255,0,100,0.1);
+    transition:.3s;
+}
+.feature-card:hover {
+    transform:translateY(-10px);
+    box-shadow:0 0 28px rgba(255,0,100,0.25);
+}
+
+/* ======== TRAINING ======== */
+.training-container {
+    display:grid;
+    gap:30px;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    width:90%;
+    margin:auto;
+    text-align: center;
+}
+
+.training-card {
+    background:#151515;
+    padding-bottom:20px;
+    border-radius:14px;
+    overflow:hidden;
+    border:1px solid rgba(255,255,255,0.05);
+    transition:.3s;
+}
+
+.training-img {
+    height: 430px;
+    background:#333;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow: hidden;
+}
+
+.training-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* مهم‌ترین خط */
+}
+
+.training-card:hover {
+    transform:scale(1.05);
+    box-shadow:0 0 30px rgba(255,0,100,0.3);
+}
+.hero-btn {
+    display:inline-block;
+    margin-top:30px;
+    padding:8px 30px;
+    background:#ff006a;
+    border-radius:8px;
+    transition:.3s;
+    font-size: 20px;
+    font-weight: bold;
+}
+/* ======== FOOTER ======== */
+.footer {
+    margin-top:70px;
+    padding:30px 0;
+    text-align:center;
+    background:#0a0a0b;
+    color:#777;
+}
+
+/* ======== SCROLL ANIMATION ======== */
+.scroll-anim {
+    opacity:0;
+    transform:translateY(40px);
+    transition:1s cubic-bezier(.2,0,.2,1);
+}
+.scroll-anim.visible {
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* ========  responsive 980 ======== */
+@media (max-width:980px) {
+    .header {
+    width: 90%;
+}
+}
+/* ======== responsive 760  ======== */
+@media (max-width:760px) {
+.header {
+    flex-direction: column;
+}
+.nav ul {
+    gap: 20px;
+    font-size: 12px;
+    padding-right: 20px;
+}
+}

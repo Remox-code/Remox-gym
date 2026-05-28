@@ -1,0 +1,188 @@
+html {
+  scroll-behavior: smooth;
+}
+/* //////////////details////////////// */
+.det details {
+    background: #111;
+    border: 1px solid #380118;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    transition: .3s;
+    overflow: hidden;
+}
+
+/* عنوان هر بخش */
+.det summary {
+    font-size: 26px;
+    color: #ff006a;
+    cursor: pointer;
+    list-style: none;
+    outline: none;
+    user-select: none;
+    padding: 5px 0;
+    position: relative;
+    text-align: center;
+}
+
+/* حذف فلش پیش‌فرض -->
+در برخی مرورگرها */
+summary::-webkit-details-marker {
+    display: none;
+}
+
+/* فلش سفارشی */
+.det summary::after {
+    content: "▼";
+    font-size: 14px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: .3s;
+}
+
+details[open] summary::after {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+/* انیمیشن باز شدن */
+.det a {
+  display: block;
+  color: #ddd;
+  text-decoration: none;
+  padding: 10px 0;
+  transition: color 0.3s, transform 0.3s;
+  text-align: center;
+
+}
+.det a:hover {
+  color: #ff006a;
+  transform: translateX(-5px);
+}
+
+
+/* وقتی باز می‌شود */
+details[open] a {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* افکت هاور روی باکس */
+.det details:hover {
+    border-color: #ff006a;
+    box-shadow: 0 0 20px rgba(255,0,100,0.2);
+}
+
+/* فاصله بین حرکات */
+.det details a {
+    border-bottom: 1px solid #222;
+}
+.det details a:last-child {
+    border-bottom: none;
+}
+
+/* //////////////cards////////////// */
+.training-page {
+    width: 90%;
+    margin: auto;
+    padding: 60px 0;
+    color: white;
+}
+
+.training-title {
+    text-align: center;
+    font-size: 45px;
+    margin-bottom: 50px;
+    background: linear-gradient(90deg,#ff006a,#ff3b3b);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.muscle-group {
+    margin-top: 100px;
+    margin-bottom: 70px;
+}
+
+.muscle-group h2 {
+font-size: 32px;
+margin-bottom: 25px;
+color: #ff006a;
+text-align: center;
+border-top: #380118 2px solid;border-right: #380118 2px solid ;border-left: #380118 2px solid ;
+width: fit-content;
+margin: 0 auto;
+padding: 10px;
+border-radius: 2px;
+}
+
+.training-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 30px;
+    padding: 100px;
+    border: #380118 3px solid;
+    border-radius: 25px;
+}
+.training-grid:hover , .muscle-group h2:hover {
+    border: #93013e 5px solid;
+    transition: ease 0.50s;
+}
+.move-card {
+    background: #151515;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: .3s;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.move-card:hover {
+    transform: scale(1.00);
+    box-shadow: 0 0 30px rgba(255,0,100,0.3);
+}
+
+.move-media {
+    height: 200px;
+    background: #222;
+    overflow: hidden;
+}
+
+.move-media img,
+.move-media video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.move-card h3 {
+    margin-top: 15px;
+    font-size: 22px;
+}
+
+.move-card p {
+    opacity: .8;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+/* //////////////responsive////////////// */
+@media (max-width:760px) {
+.training-title {
+    font-size: 35px;
+}
+.muscle-group h2 {
+font-size: 25px;
+}
+.training-grid{
+    grid-template-columns: repeat(1,1fr);
+    padding:30px;
+}
+.move-card h3 {
+font-size: 18px;
+}
+.move-card p {
+    font-size: 12px;
+}
+}

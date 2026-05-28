@@ -1,0 +1,128 @@
+/* پس‌زمینه اصلی سایت */
+body{
+  background: url("../../images/gntc.png");
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  font-family: "Vazirmatn", sans-serif;
+}
+
+/* WRAPPER → باکس‌های اصلی */
+.wrapper{
+  width: 90%;
+  max-width: 1100px;
+
+  margin: 150px auto 60px auto; /* فاصله مناسب زیر هدر */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* کارت‌ها */
+.card{
+  background: #ffffff15;
+  padding: 20px;
+  border-radius: 12px;
+  width: 45%;
+  min-width: 320px;
+  box-shadow: 0 0 25px rgb(255, 0, 0);
+  text-align: center;
+
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.card h2{
+  margin-bottom: 15px;
+  font-weight: 700;
+  color: white;
+}
+
+/* ردیف‌های دو ستونه */
+.row{
+  display: flex;
+  gap: 10px;
+}
+
+/* استایل inputs و select */
+input, select{
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #3c0016;
+  width: 100%;
+  text-align: center;
+  color: white;
+  background-color: #29232C;
+  font-size: 15px;
+}
+
+/* دکمه ها */
+button{
+  margin-top: 15px;
+  width: 100%;
+  padding: 12px;
+  background: #0f2027;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+button:hover{
+  background: #1c2f36;
+  transform: scale(1.05);
+}
+
+/* دکمه آپلود */
+/* دکمه آپلود */
+.uploadLabel{
+  display: block;
+  padding: 12px;
+  text-align: center;
+  background: #103a4c;
+  color: white;
+  border-radius: 8px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* حالت بعد از آپلود موفق */
+.uploaded{
+  background: #1f7a1f !important;
+  color: #fff !important;
+  border: 1px solid #0f4d0f;
+}
+
+
+/* مخفی کردن input file */
+#imgInput{
+  display:none;
+}
+
+/* پیام‌ها */
+.msg{
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+}
+
+/* —————— ریسپانسیو موبایل —————— */
+@media (max-width: 900px) {
+  .wrapper{
+    flex-direction: column;
+    gap: 60px;
+    margin-top: 160px;
+  }
+
+  .card{
+    width: 90%;
+  }
+}
