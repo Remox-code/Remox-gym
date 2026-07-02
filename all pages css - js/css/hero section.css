@@ -1,0 +1,45 @@
+.hero {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero .bg {
+  position: absolute;
+  inset: 0;
+  filter: brightness(0.4);
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  width: 80%;
+}
+
+.hero-content h1,
+span {
+  font-size: 55px;
+  margin-bottom: 10px;
+  color: white;
+  font-family: "Dana", sans-serif;
+  font-weight: 700;
+}
+
+.hero-content h1 {
+  background: linear-gradient(90deg, #ff006a, #ff3b3b);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.hero-content p {
+  font-size: 25px;
+  opacity: 0.85;
+}
+
+.hero-btn:hover {
+  background: #ff004f;
+  transform: translateY(-5px);
+}
